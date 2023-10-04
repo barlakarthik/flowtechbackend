@@ -6,6 +6,7 @@ const createEnquiry = async (req, res) => {
             contact,
             territory,
             enqRefNum,
+            enqSource,
             sector,
             enqOwner,
             products
@@ -15,6 +16,7 @@ const createEnquiry = async (req, res) => {
             contact,
             territory,
             enqRefNum,
+            enqSource,
             sector,
             enqOwner,
             products

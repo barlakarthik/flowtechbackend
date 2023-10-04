@@ -1,20 +1,24 @@
 import mongoose from "mongoose";
 const enquirymodel = new mongoose.Schema({
-    id: {
-        type: String
-    },
     accountname: {
         type: String,
         required: true
     },
     contact: {
         type: Number,
+        required: true
     },
     territory: {
         type: String,
+        required: true
     },
     enqRefNum: {
-        type: String
+        type: String,
+        required: true
+    },
+    enqSource:{
+        type:String,
+        required:true
     },
     sector: {
         type: Object,
