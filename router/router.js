@@ -5,6 +5,7 @@ import * as ProductsController from '../controllers/products.controller.js';
 import Auth, { localVariables } from '../middleware/Auth.js';
 import { registerMail } from '../controllers/mailer.js';
 const router = Router();
+///
 //user CRUD
 //post method:
 router.route('/register').post(Usercontroller.register);
