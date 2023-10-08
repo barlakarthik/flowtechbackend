@@ -2,6 +2,7 @@ import { Router } from 'express';
 import * as Usercontroller from '../controllers/appController.js';
 import * as Enquirycontroller from '../controllers/enquiryController.js';
 import * as ProductsController from '../controllers/products.controller.js';
+import * as createMailController from '../controllers/approveMail.controller.js';
 import Auth, { localVariables } from '../middleware/Auth.js';
 import { registerMail } from '../controllers/mailer.js';
 const router = Router();
@@ -36,5 +37,7 @@ router.route('/enquiry/:id').put(Enquirycontroller.UpdateEnquiry);
 router.route('/enquiry/:id').delete(Enquirycontroller.DelEnquiry);
 //products CRUD
 //get method
-router.route('/products').get(ProductsController.getProducts)
+router.route('/products').get(ProductsController.getProducts);
+//mail sending
+router.route('/sentmail').post(createMailController.createMail);
 export default router;
