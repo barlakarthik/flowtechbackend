@@ -32,6 +32,14 @@ const enquirymodel = new mongoose.Schema({
         type: Boolean,
         default: false
     },
+    accept: {
+        type: Boolean,
+        default: false
+    },
+    reject: {
+        type: Boolean,
+        default: false
+    },
     products: {
         type: Array
     }
