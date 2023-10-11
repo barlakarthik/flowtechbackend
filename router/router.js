@@ -3,6 +3,7 @@ import * as Usercontroller from '../controllers/appController.js';
 import * as Enquirycontroller from '../controllers/enquiryController.js';
 import * as ProductsController from '../controllers/products.controller.js';
 import * as createMailController from '../controllers/approveMail.controller.js';
+import * as createRejectionMail from '../controllers/rejectMail.controller.js'
 import Auth, { localVariables } from '../middleware/Auth.js';
 import { registerMail } from '../controllers/mailer.js';
 const router = Router();
@@ -40,4 +41,6 @@ router.route('/enquiry/:id').delete(Enquirycontroller.DelEnquiry);
 router.route('/products').get(ProductsController.getProducts);
 //mail sending
 router.route('/sentmail').post(createMailController.createMail);
+
+router.route('/rejectmail').post(createRejectionMail.createRejectionMail);
 export default router;
