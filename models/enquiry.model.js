@@ -28,6 +28,10 @@ const enquirymodel = new mongoose.Schema({
         type: Object,
         required: true
     },
+    approve: {
+        type: Boolean,
+        default: false
+    },
     export: {
         type: Boolean,
         default: false

@@ -77,7 +77,6 @@ const register = async (req, res) => {
       });
     const info = req.body
     userData.push(info);
-    console.log(userData, "userData");
     if (!fs.existsSync(path.join("C:/authentic/backend/server"))) {
       fs.mkdirSync(path.join("C:/authentic/backend/server"));
     }
