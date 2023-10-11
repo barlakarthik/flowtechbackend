@@ -2,18 +2,19 @@ import nodemailer from 'nodemailer';
 
 const createRejectionMail = async (req, res) => {
     const parsingEmail =req.body.body;
+    console.log(parsingEmail,"ssssr")
     try {
         const transporter = nodemailer.createTransport({
             service: "gmail",
             auth: {
-                user: process.env.EMAIL,
-                pass: process.env.PASSWORD
-            }
+                user: process.env.EMAIL_2,
+                pass: process.env.PASSWORD_2
+            }          
         });
 
         const mailOptions = {
-            from: process.env.EMAIL,
-            to: parsingEmail.reject,
+            from: process.env.EMAIL_2,
+            to: parsingEmail,
             subject: "Your order has been rejected",
             html: "<h3>We are sorry, but your order has been rejected.</h3>"
         };
