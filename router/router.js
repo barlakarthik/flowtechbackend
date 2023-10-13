@@ -39,6 +39,8 @@ router.route('/enquiry/:id').delete(Enquirycontroller.DelEnquiry);
 //products CRUD
 //get method
 router.route('/products').get(ProductsController.getProducts);
+router.route('/product').post(ProductsController.postProduct);
+router.route('/product/:id').delete(ProductsController.removeProduct);
 //mail sending
 router.route('/sentmail').post(createMailController.createMail);
 
