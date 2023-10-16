@@ -1,4 +1,5 @@
 import { Router } from 'express';
+import * as PermissionsController from '../controllers/permissions.controller.js'
 import * as Usercontroller from '../controllers/appController.js';
 import * as Enquirycontroller from '../controllers/enquiryController.js';
 import * as ProductsController from '../controllers/products.controller.js';
@@ -43,6 +44,8 @@ router.route('/product').post(ProductsController.postProduct);
 router.route('/product/:id').delete(ProductsController.removeProduct);
 //mail sending
 router.route('/sentmail').post(createMailController.createMail);
-
+//mail rejecting
 router.route('/rejectmail').post(createRejectionMail.createRejectionMail);
+//get permissions
+router.route('/permissions').get(PermissionsController.getPermissions);
 export default router;
